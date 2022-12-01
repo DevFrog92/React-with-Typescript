@@ -1,19 +1,8 @@
 import React from 'react'
+import { CountryType } from "../App";
 
-type CountryType = {
-  no: number;
-  country: string;
-  visited: boolean;
-};
-
-
-const CountryList = () => {
-  let list: CountryType[] = [
-    { no: 1, country: "일본", visited: true },
-    { no: 2, country: "미국", visited: false },
-    { no: 3, country: "영국", visited: true },
-    { no: 4, country: "스위스", visited: false },
-  ];
+const CountryList = ({ countries }: {countries: CountryType[]}) => {
+  let list = countries;
 
   // 타입을 명시하지 않아도 타입추론이 된다.
   let counties = list.map((item, index) => {
