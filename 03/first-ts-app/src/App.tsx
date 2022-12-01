@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CountryList from './components/CountryList'
 
 type Props = {}
@@ -11,13 +11,14 @@ export type CountryType = {
 
 
 const App = () => {
-  let msg = 'React typescript'
-  let list: CountryType[] = [
-    { no: 1, country: "일본", visited: true },
-    { no: 2, country: "미국", visited: false },
-    { no: 3, country: "영국", visited: true },
-    { no: 4, country: "스위스", visited: false },
-  ];
+  const [msg, setMsg] = useState<string>('World');
+  const [list, setList] = useState<CountryType[]>(
+    [
+      { no: 1, country: "일본", visited: true },
+      { no: 2, country: "미국", visited: false },
+      { no: 3, country: "영국", visited: true },
+      { no: 4, country: "스위스", visited: false },
+    ]);
 
   const addResult = (x: number, y: number) => {
     return (
