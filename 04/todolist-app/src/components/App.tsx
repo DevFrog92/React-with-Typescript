@@ -8,7 +8,18 @@ type AppProps = {
 }
 
 const App = (props: AppProps) => {
-  return <></>
+  return (
+    <div className="container">
+      <div className="card card-body bg-light">
+        <div className="title">:: TodoList App</div>
+      </div>
+      <div className="card card-default card-borderless">
+        <div className="card-body">
+          {/* TODO: component */}
+        </div>
+      </div>
+    </div>
+  )
 };
 
 export default App;
