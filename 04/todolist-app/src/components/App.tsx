@@ -1,4 +1,6 @@
 import { TodoListItemType } from "../AppContainer";
+import InputTodo from './InputTodo';
+import TodoList from './TodoList';
 
 type AppProps = {
   todoList: TodoListItemType[];
@@ -15,7 +17,8 @@ const App = (props: AppProps) => {
       </div>
       <div className="card card-default card-borderless">
         <div className="card-body">
-          {/* TODO: component */}
+          <InputTodo addTodo={props.addTodo} />
+          <TodoList todoList={props.todoList} deleteTodo={props.deleteTodo} toggleTodo={ props.toggleTodo} />
         </div>
       </div>
     </div>
