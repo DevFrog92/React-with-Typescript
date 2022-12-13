@@ -1,10 +1,13 @@
 import Chatting from './components/Chatting'
 import './App.css'
+import ErrorBoundary from './components/ErrorBoundary'
 
 function App() {
   return (
     <div className="App">
-      <Chatting/>
+      <ErrorBoundary>
+        <Chatting/>
+      </ErrorBoundary>
     </div>
   )
 }
